@@ -1,7 +1,5 @@
 import { Pokemon } from "@/types";
-
 import PokemonCard from "../PokemonCard";
-import styles from "./PokemonList.module.css";
 
 type PokemonListProps = {
   pokemons: Pokemon[];
@@ -9,9 +7,11 @@ type PokemonListProps = {
 
 const PokemonList = ({ pokemons }: PokemonListProps) => {
   return (
-    <div className={styles.pokemonList}>
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
       {pokemons.map((pokemon) => (
-        <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        <div key={pokemon.id} className="col">
+          <PokemonCard pokemon={pokemon} />
+        </div>
       ))}
     </div>
   );

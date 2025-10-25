@@ -1,17 +1,157 @@
 .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    margin: 8px;
+  border-radius: 16px;
+  padding: 1.2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.pokemonImage {
-    max-width: 100%;
-    height: auto;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.infoSection {
+  flex: 1;
+}
+
+.pokemonId {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: block;
 }
 
 .pokemonName {
-    font-size: 1.2em;
-    margin: 8px 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.3rem 0 0.6rem;
+}
+
+.typeContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.imageSection {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemonImage {
+  width: 80%;
+  height: auto;
+  z-index: 1;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20%;
+  z-index: 0;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.favoriteButton:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.grass {
+  background: linear-gradient(135deg, #74CB48 0%, #5aa63a 100%);
+}
+
+.fire {
+  background: linear-gradient(135deg, #F57D31 0%, #d9651f 100%);
+}
+
+.water {
+  background: linear-gradient(135deg, #6493EB 0%, #3b6dd1 100%);
+}
+
+.poison {
+  background: linear-gradient(135deg, #A43E9E 0%, #7e2f7a 100%);
+}
+
+.bug {
+  background: linear-gradient(135deg, #A7B723 0%, #889c1b 100%);
+}
+
+.normal {
+  background: linear-gradient(135deg, #AAA67F 0%, #8d8a68 100%);
+}
+
+.flying {
+  background: linear-gradient(135deg, #A891EC 0%, #8874d1 100%);
+}
+
+.electric {
+  background: linear-gradient(135deg, #F9CF30 0%, #d1ac26 100%);
+}
+
+.ground {
+  background: linear-gradient(135deg, #DEC16B 0%, #bfa454 100%);
+}
+
+.rock {
+  background: linear-gradient(135deg, #B69E31 0%, #8f7a26 100%);
+}
+
+.fairy {
+  background: linear-gradient(135deg, #E69EAC 0%, #c67f89 100%);
+}
+
+.fighting {
+  background: linear-gradient(135deg, #C12239 0%, #9e1a2c 100%);
+}
+
+.psychic {
+  background: linear-gradient(135deg, #FB5584 0%, #d13b66 100%);
+}
+
+.ghost {
+  background: linear-gradient(135deg, #70559B 0%, #574374 100%);
+}
+
+.steel {
+  background: linear-gradient(135deg, #B7B9D0 0%, #8f91a8 100%);
 }
