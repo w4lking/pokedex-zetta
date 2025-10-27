@@ -13,7 +13,7 @@ export default function Home() {
 
     useEffect(() => {
         const loadPokemons = async () => {
-            const pokemonData = await getPokemons(50, 0); 
+            const pokemonData = await getPokemons(200, 0); 
             setPokemons(pokemonData);
             setLoading(false);
         };

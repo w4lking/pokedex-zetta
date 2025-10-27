@@ -7,12 +7,14 @@ type PokemonListProps = {
 
 const PokemonList = ({ pokemons }: PokemonListProps) => {
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
-      {pokemons.map((pokemon) => (
-        <div key={pokemon.id} className="col">
-          <PokemonCard pokemon={pokemon} />
-        </div>
-      ))}
+    <div className="container-fluid mt-4">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+        {pokemons.map((pokemon) => (
+          <div key={pokemon.id} className="col">
+            <PokemonCard pokemon={pokemon} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -29,7 +29,6 @@ export default function PokemonCard({ pokemon }: PokemonCardProps) {
 
         <div className={styles.imageSection}>
           <div className={styles.imageContainer}>
-            <button className={styles.favoriteButton}>♡</button>
             <img
               src={pokemon.image}
               alt={pokemon.name}
